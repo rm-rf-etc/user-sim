@@ -12,7 +12,7 @@ request.defaults({
 
 
 var rate = oneSec * 0.25
-var limit = 100
+var limit = 500
 var lifespan = 5 * oneMin
 
 

@@ -4,8 +4,7 @@
   "description": "For server load testing. Creates user objects at X rate which submit posts at N frequency for Y duration.",
   "main": "main.js",
   "dependencies": {
-    "request": "^2.57.0",
-    "hyperquest": "^1.2.0"
+    "request": "^2.57.0"
   },
   "devDependencies": {},
   "scripts": {
