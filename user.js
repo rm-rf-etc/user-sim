@@ -2,6 +2,13 @@
 var oneSec = 1000
 var oneMin = 60 * oneSec
 
+/*
+ * These are the settings that control user generation and behavior.
+ */
+var rate = oneSec * 0.25
+var limit = 500
+var lifespan = 5 * oneMin
+
 
 var request = require('request')
 request.defaults({
@@ -9,11 +16,6 @@ request.defaults({
 		maxSockets: Infinity
 	}
 })
-
-
-var rate = oneSec * 0.25
-var limit = 500
-var lifespan = 5 * oneMin
 
 
 
