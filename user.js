@@ -10,12 +10,11 @@ request.defaults({
 	}
 })
 
-var lifespan = 0.25 * oneMin
-// var lifespan = 0.5 * oneSec
-var rate     = oneSec
-// var rate     = 0.25 * oneSec
-var limit    = 30
-// var limit    = 1
+
+var rate = oneSec * 0.25
+var limit = 100
+var lifespan = 5 * oneMin
+
 
 
 var post_data = require('./data/1.json')
@@ -44,6 +43,7 @@ var req_opts = {
 
 ;(function(){
 
+	User.fails = []
 	User.limit = limit
 	User.rate = rate
 
@@ -63,7 +63,9 @@ var req_opts = {
 
 		var req = request(req_target, req_opts, function(err, res, buf)
 		{
-			console.log( 'USER '+self.id+' RECEIVED STATUS '+res.statusCode )
+			if (res.statusCode !== 200)
+				User.fails[ User.fails.length ] = self.id
+			// console.log( 'USER '+self.id+' RECEIVED STATUS '+res.statusCode )
 		})
 
 		setTimeout(function(){ self.wait() }, rate)

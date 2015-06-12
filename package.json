@@ -1,0 +1,30 @@
+{
+  "name": "user-sim",
+  "version": "1.0.0",
+  "description": "For server load testing. Creates user objects at X rate which submit posts at N frequency for Y duration.",
+  "main": "main.js",
+  "dependencies": {
+    "request": "^2.57.0",
+    "hyperquest": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rm-rf-etc/user-sim.git"
+  },
+  "keywords": [
+    "user-simulator",
+    "simulator",
+    "load-test",
+    "load-testing"
+  ],
+  "author": "Robert Christian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rm-rf-etc/user-sim/issues"
+  },
+  "homepage": "https://github.com/rm-rf-etc/user-sim"
+}

@@ -28,7 +28,7 @@ function whenDead(user)
 
 var intvl = setInterval(function(){
 
-	console.log('ACTIVE:'+n_active.length+' DONE:'+n_done.length)
+	console.log('ACTIVE:'+n_active.length+' DONE:'+n_done.length+' FAILS:'+User.fails.length)
 
 	if (n_active.length === 0) {
 
